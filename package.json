@@ -1,0 +1,24 @@
+{
+  "name": "astro-cloudflare-optimize-deps-repro",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "packageManager": "pnpm@11.25.0",
+  "scripts": {
+    "clean": "node scripts/clean.mjs",
+    "dev": "astro dev"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "14.3.3",
+    "astro": "7.3.5",
+    "dedent": "1.7.2"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "1.59.0",
+    "@cloudflare/workers-types": "5.20260924.1",
+    "@types/node": "26.6.2",
+    "typescript": "7.0.2",
+    "vite": "8.3.1",
+    "wrangler": "4.138.0"
+  }
+}
