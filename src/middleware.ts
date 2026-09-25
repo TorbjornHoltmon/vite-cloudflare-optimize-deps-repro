@@ -1,6 +1,8 @@
 import { defineMiddleware } from 'astro:middleware';
-import { runWithRequestContext } from './request-context';
+import { getRequestID, runWithRequestID } from './request-context';
 
-export const onRequest = defineMiddleware((_context, next) => {
-  return runWithRequestContext(next);
+export const onRequest = defineMiddleware((context, next) => {
+  return runWithRequestID(() => {
+    return next();
+  });
 });

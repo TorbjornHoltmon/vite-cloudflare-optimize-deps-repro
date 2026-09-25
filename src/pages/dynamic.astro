@@ -1,0 +1,18 @@
+---
+const { triggerIssue } = await import('../lib');
+
+const result = triggerIssue();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="" />
+    <title>Hello world</title>
+  </head>
+  <body>
+    <pre>{result}</pre>
+  </body>
+</html>
