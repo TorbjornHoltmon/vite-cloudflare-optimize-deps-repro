@@ -1,0 +1,22 @@
+---
+import { actions } from 'astro:actions';
+
+const result = await Astro.callAction(actions.object, {});
+
+if (result.error) {
+  throw result.error
+}
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="" />
+    <title>Hello world</title>
+  </head>
+  <body>
+    <pre>{result.data}</pre>
+  </body>
+</html>
